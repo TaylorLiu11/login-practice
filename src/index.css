@@ -1,13 +1,149 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Noto+Sans+TC:wght@400;500&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', 'Noto Sans TC', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input, button {
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to bottom right, #7474BF, #348AC7);
+}
+
+form {
+  display: block;
+  position: relative;
+  min-width: 500px;
+}
+
+form .form-inner {
+  position: relative;
+  display: block;
+  background-color: #f1f1f1;
+  padding: 30px;
+  z-index: 2;
+  font-weight: 500;
+}
+
+form .form-inner h2 {
+  display: flex;
+  width: max-content;
+  color: #434343;
+  border-bottom: 5px solid #434343;
+  font-size: 32px;
+  margin-bottom: 30px;
+  padding-bottom: 3px;
+}
+
+form .form-inner .form-group {
+  display: block;
+  width: 90%;
+  margin-bottom: 12px;
+}
+
+.form-inner .form-group label {
+  display: block;
+  color: #434343;
+  font-size: 26px;
+  margin-bottom: 5px;
+  transition: .4s;
+}
+
+.form-inner .form-group:focus-within label {
+  color: #8f8fcc;
+}
+
+form .form-inner .form-group input {
+  color: #242424;
+  font-size: 22px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  padding: 6px 15px;
+  background-color: #8798c573;
+  border-radius: 6px;
+  transition: .2s ease-in;
+}
+
+form .form-inner .form-group input:focus {
+  box-shadow: 0 0 5px rgba(0,0,0, .4);
+}
+
+form .form-inner input[type="submit"] {
+  display: inline-block;
+  padding: 10px 16px;
+  background: linear-gradient(to bottom right, #539bc2 0%, #34b1c7 100%);
+  background-size: 320%;
+  color: #f1f1f1;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .2s ease-in;
+}
+
+form .form-inner input[type="submit"]:hover,
+form .form-inner input[type="submit"]:active {
+  background: linear-gradient(to bottom right, #539bc2 , #34b1c7);
+  background-position: 100%;
+  box-shadow: 0 0 5px rgba(0,0,0, .4);
+  transform: scale(1.03);
+}
+
+form .form-inner input[type="submit"]:active {
+  transform: translateY(1px) scale(1.01);
+}
+
+.error {
+  font-size: 22px;
+  color: #aa4551;
+}
+
+.welcome {
+  min-width: 500px;
+  background-color: #f1f1f1;
+  padding: 30px 60px;
+  border-radius: 10px;
+  box-shadow: 0 0 7px rgba(0,0,0, .3);
+  color: #242424;
+  font-size: 22px;
+}
+
+.welcome h2 {
+  margin-bottom: 12px;
+}
+
+.welcome-button {
+  display: inline-block;
+  padding: 10px 16px;
+  background: linear-gradient(to bottom right, #539bc2 0%, #34b1c7 100%);
+  background-size: 320%;
+  color: #f1f1f1;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .2s ease-in;
+}
+
+.welcome-button:hover,
+.welcome-button:active {
+  background: linear-gradient(to bottom right, #539bc2 , #34b1c7);
+  background-position: 100%;
+  box-shadow: 0 0 5px rgba(0,0,0, .4);
+  transform: scale(1.03);
+}
+
+.welcome-button:active {
+  transform: translateY(1px) scale(1.01);
 }
