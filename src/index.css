@@ -22,10 +22,17 @@ input, button {
   background-image: linear-gradient(to bottom right, #7474BF, #348AC7);
 }
 
+.login {
+  display: flex;
+  position: relative;
+}
+
 form {
   display: block;
   position: relative;
   min-width: 500px;
+  box-shadow: 0 0 20px 5px rgba(0,0,0, .2);
+  z-index: 10;
 }
 
 form .form-inner {
@@ -43,7 +50,7 @@ form .form-inner h2 {
   color: #434343;
   border-bottom: 5px solid #434343;
   font-size: 32px;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   padding-bottom: 3px;
 }
 
@@ -62,7 +69,7 @@ form .form-inner .form-group {
 }
 
 .form-inner .form-group:focus-within label {
-  color: #8f8fcc;
+  color: #6565b8;
 }
 
 form .form-inner .form-group input {
@@ -75,6 +82,7 @@ form .form-inner .form-group input {
   background-color: #8798c573;
   border-radius: 6px;
   transition: .2s ease-in;
+  caret-color: #6565b8;
 }
 
 form .form-inner .form-group input:focus {
@@ -83,11 +91,12 @@ form .form-inner .form-group input:focus {
 
 form .form-inner input[type="submit"] {
   display: inline-block;
-  padding: 10px 16px;
+  padding: 8px 12px;
   background: linear-gradient(to bottom right, #539bc2 0%, #34b1c7 100%);
   background-size: 320%;
   color: #f1f1f1;
   font-weight: 500;
+  font-size: 18px;
   border-radius: 5px;
   cursor: pointer;
   transition: all .2s ease-in;
@@ -105,45 +114,45 @@ form .form-inner input[type="submit"]:active {
   transform: translateY(1px) scale(1.01);
 }
 
-.error {
+.right {
+  background-color: #DCA8AE;
+  border-radius: 0 5px 5px 0;
+  height: 100px;
+  padding: 0 10px;
+  position: absolute;
+  top: 10px;
+  right: -60px;
   font-size: 22px;
-  color: #aa4551;
-}
-
-.welcome {
-  min-width: 500px;
-  background-color: #f1f1f1;
-  padding: 30px 60px;
-  border-radius: 10px;
-  box-shadow: 0 0 7px rgba(0,0,0, .3);
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 20px 5px rgba(0,0,0, .2);
   color: #242424;
-  font-size: 22px;
-}
-
-.welcome h2 {
-  margin-bottom: 12px;
-}
-
-.welcome-button {
-  display: inline-block;
-  padding: 10px 16px;
-  background: linear-gradient(to bottom right, #539bc2 0%, #34b1c7 100%);
-  background-size: 320%;
-  color: #f1f1f1;
-  font-weight: 500;
-  border-radius: 5px;
   cursor: pointer;
-  transition: all .2s ease-in;
+  transition: .2s ease-in;
+  z-index: 1;
 }
 
-.welcome-button:hover,
-.welcome-button:active {
-  background: linear-gradient(to bottom right, #539bc2 , #34b1c7);
-  background-position: 100%;
-  box-shadow: 0 0 5px rgba(0,0,0, .4);
-  transform: scale(1.03);
+.left {
+  background-color: #DCA8AE;
+  border-radius: 5px 0 0 5px;
+  height: 100px;
+  padding: 0 10px;
+  position: absolute;
+  top: 10px;
+  left: -60px;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 6px 2px rgba(0,0,0, .2);
+  color: #242424;
+  cursor: pointer;
+  transition: .2s ease-in;
+  z-index: 1;
 }
 
-.welcome-button:active {
-  transform: translateY(1px) scale(1.01);
+.left:hover,
+.left:active,
+.right:hover,
+.right:active {
+  background-color: #d699a1;
 }
